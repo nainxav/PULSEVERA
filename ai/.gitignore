@@ -1,0 +1,28 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Models & artifacts (regeneratable)
+models/*.joblib
+models/*.pkl
+
+# Reports
+reports/figures/*.png
+reports/metrics/*.json
+!reports/figures/.gitkeep
+!reports/metrics/.gitkeep
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Testing
+.pytest_cache/
+.coverage

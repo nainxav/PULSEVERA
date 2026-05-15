@@ -7,7 +7,13 @@ a JSON snapshot to ``ai/reports/metrics/dataset_summary.json``.
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import asdict
+from pathlib import Path
+
+_AI_DIR = Path(__file__).resolve().parent.parent
+if str(_AI_DIR) not in sys.path:
+    sys.path.insert(0, str(_AI_DIR))
 
 from src import config
 from src.preprocessing import basic_clean, load_raw_dataset, summarise

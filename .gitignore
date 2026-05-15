@@ -1,0 +1,104 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+.installed.cfg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Packaging / build
+*.manifest
+*.spec
+
+# ---------- Testing / coverage ----------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+.tox/
+.nox/
+.cache/
+
+# ---------- Notebooks ----------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------- ML / data artifacts ----------
+ai/models/*.joblib
+ai/models/*.pkl
+ai/reports/figures/*.png
+ai/reports/metrics/*.json
+!ai/models/.gitkeep
+!ai/reports/figures/.gitkeep
+!ai/reports/metrics/.gitkeep
+
+# Keep curated datasets, ignore generated / large intermediate files
+*.parquet
+*.feather
+*.npy
+*.npz
+mlruns/
+wandb/
+
+# ---------- Node / Web (full-stack subproject) ----------
+node_modules/
+.npm
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+yarn-error.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+.vercel/
+.netlify/
+
+# ---------- Environment / secrets ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# ---------- IDE / editor ----------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.cursor/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---------- Logs ----------
+*.log
+logs/

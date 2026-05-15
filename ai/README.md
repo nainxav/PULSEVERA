@@ -65,24 +65,27 @@ order):
 
 ## Workflow
 
+All scripts auto-bootstrap their import path, so any of these styles work:
+
 ```bash
+# From the ai/ directory
 cd ai
-
-# Week 1 – sanity check the dataset
 python -m scripts.explore_data
-
-# Week 2 – cross-validated baselines (no model is saved)
 python -m scripts.train_baseline
-
-# Week 3-4 – tune, evaluate, persist, render SHAP summary
 python -m scripts.train_full
-
-# Week 4-5 – run a prediction from the CLI
 python -m scripts.predict_sample
-
-# Week 4-5 – serve the REST API
 python -m scripts.serve_api
-# or:
+
+# Or run the file directly from inside scripts/
+cd ai/scripts
+python explore_data.py
+python train_baseline.py
+python train_full.py
+python predict_sample.py
+python serve_api.py
+
+# Or start the API with uvicorn directly (run from ai/)
+cd ai
 uvicorn src.api:app --reload
 ```
 

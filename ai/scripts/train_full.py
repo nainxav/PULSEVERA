@@ -12,8 +12,14 @@ Pipeline:
 from __future__ import annotations
 
 import json
+import sys
+from pathlib import Path
 
 from sklearn.model_selection import train_test_split
+
+_AI_DIR = Path(__file__).resolve().parent.parent
+if str(_AI_DIR) not in sys.path:
+    sys.path.insert(0, str(_AI_DIR))
 
 from src import config
 from src.evaluate import evaluate_and_persist
